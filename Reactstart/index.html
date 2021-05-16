@@ -37,9 +37,6 @@
         <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     
         <script type="text/javascript">
-            // console.log(React);
-            // console.log(ReactDOM);
-
             // const root = document.querySelector('#root');
             // const btn_plus = document.querySelector('#btn_plus');
 
@@ -50,26 +47,44 @@
             //     root.innerHTML = `<p>init : ${++i}</p>`;
             // });
 
-            const component = { // 초기값
-                message : 'init',
-                count : 0,
-                render() {
-                    return `<p>${this.message} : ${this.count} </p>`;
-                }
+            // const component = { // 초기값
+            //     message : 'init',
+            //     count : 0,
+            //     render() {
+            //         return `<p>${this.message} : ${this.count} </p>`;
+            //     }
+            // };
+            // function render (rootElement, component) {
+            //     rootElement.innerHTML = component.render();
+            // }
+
+            // // 초기화 단계
+            // render(document.querySelector('#root'), component);
+
+            // // 버튼 작업
+            // document.querySelector('#btn_plus').addEventListener('click', () => {
+            //     component.message = 'update';
+            //     component.count = component.count + 1;
+
+            //     render(document.querySelector('#root'), component);
+            // });
+
+            console.log(React);
+            console.log(ReactDOM);
+
+            // 리액트 컴포넌트 만들자 -> p 태그를 만들자
+            const Component = props => {
+                return React.createElement(
+                    'p', null, `${props.message} : ${props.count}`
+                );
             };
-            function render (rootElement, component) {
-                rootElement.innerHTML = component.render();
-            }
 
-            // 초기화 단계
-            render(document.querySelector('#root'), component);
-
-            // 버튼 작업
+            ReactDOM.render(React.createElement(Component, {message : 'init', count : 0}, null), 
+            document.querySelector('#root'));
+        
             document.querySelector('#btn_plus').addEventListener('click', () => {
-                component.message = 'update';
-                component.count = component.count + 1;
-
-                render(document.querySelector('#root'), component);
+                ReactDOM.render(React.createElement(Component, {message : 'update', count : 10}, null), 
+                document.querySelector('#root'));
             });
         </script>
     </body>

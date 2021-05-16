@@ -96,11 +96,14 @@ Component (React 안 쓸 때)
 -> 귀찮음
 => React로 편하게 해보자
 
+-> React Component를 만들자 (함수 취급
+-> 어떤 모습을 정의한다.
 
+결론 : 가상의 DOM을 가지고 있다가 실제 DOM으로 반영하는 것이 React
 
+Ch 2. React Component
 
-
-
+01. React Concept 만드는 법
 
 
 
