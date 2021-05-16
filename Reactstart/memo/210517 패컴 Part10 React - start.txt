@@ -1,0 +1,84 @@
+210517 패스트 캠퍼스 - Part 10. React로 쇼핑몰 만들기
+
+Ch 1. React Getting Started
+
+01. React Concept
+
+* Angular vs React vs Vue
+
+Angular - 웹 모든 기능을 제공 - Full Framework
+Vue - Angular + React - Library
+React - View (user interface)에 focus - both
+
+* 'Component' Based Development
+
+ex) HTML element -> 이미 정의되어 있음
+<img src = "이미지 주소" />
+
+ex) React -> 내가 만든 컴포넌트
+src 대신에 'prop' 이라 쓰는데 이걸 지정해줌
+
+* Component Tree : 유사 DOM Tree 
+: DOM 은 이미 내장되어 있는 목록에서 가져옴 
+-> Component는 내가 만든다
+
+* Virtual DOM
+: 그동안은 실제 DOM
+
+React에서는 상태별로 virtual DOM 비교해서 바꿔줌
+
+
+* CSR (Client Side Rendering) 기본임
+: 어떤 특정 도메인에 접속하면 html 먼저 다운 받고
+html 안에 있는 DOM이나 style이 보일 거임
+그 후 JS 전체가 다운받아야 React 전체 실행된다
+그리고 화면에 보이고 user한테 보여진다
+
+* SSR (Server)
+: 이미 HTML 표현되어 있는 HTML 다운받음
+그 안에 있는 js 다시 요청하면 이미 render되어서
+화면에 보일 거임. 다만 js 실행 안되어서 동작은 x
+미리 html로 render됨 ㅇㅇ
+다음에 다운된 js에는 react도 실행 후 user 사용 가능
+
+
+02. 개발 환경 체크
+
+- 개발환경 : Node.js 다운받자
+- Browser : Chrome
+
+
+03. React 라이브러리
+
+* React가 하는 일 - 핵심 모듈 라이브러리 2가지
+
+- react-dom -> HTMLelement 연결
+- react -> React component 만들기
+
+{ React Component (JS, JSX) }
+-> ReactDOM.render 함수로 연결 - html에서 가져온 실제 DOM을 그려라
+-> < HTML Element>
+
+결론 
+: '만들어진 React Component'를 실제 HTML Element에 연결할 때
+ReactDOM 라이브러리를 이용한다
+
+
+* React Component를 만들어보자
+: import react를 해서 API를 사용한다
+
+* CDN을 통한 React Library 사용
+-> 직접 공식 웹에서 가져옴
+
+먼저 폴더 새로 파고 npm 프로젝트로 만들자
+$npm init -y
+ 
+해당 폴더를 파일 서버처럼 운영하도록
+$npx serve
+-> 웹서버 하나가 열린다 -> 포트 5000번 들가니까 목록이 나옴
+여기에 index.html 작성해보자
+
+
+
+
+
